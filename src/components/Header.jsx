@@ -8,7 +8,7 @@ function Header({ theme, toggleTheme }) {
         <Link to="/" className="logo">
           <img
             className="logo-image"
-            src="/images/bblogo.png"
+            src="/images/bazinga.jpg"
             alt="Big Bang Theory"
           />
           <span className="subtitle">Vanity Cards Archive</span>
