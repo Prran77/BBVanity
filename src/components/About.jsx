@@ -81,9 +81,9 @@ function About() {
         <section className="about-section">
           <h2>Deployment</h2>
           <p>
-            This site is designed to be deployed on GitHub Pages, making it freely accessible
-            to all fans of the show. The static site generation ensures fast loading times and
-            excellent performance.
+            This site was engineered with assistance from OpenAI Codex and deployed to Azure Static Web Apps on the free tier, because the funding model currently resembles a graduate student stipend.
+
+Everything here is statically generated, which means the whole thing runs on pure HTML, CSS, and an unreasonable amount of nerd enthusiasm. The upside is that it loads faster than Sheldon can correct someone’s physics. The downside is that if you notice any inconsistencies, continuity errors, or strange behavior, it is most likely the result of AI generated code colliding with fan level enthusiasm rather than an intentional violation of the Big Bang Theory canon
           </p>
         </section>
 
