@@ -10,8 +10,8 @@
     "summary": "<p>Is a comedy about brilliant physicists, Leonard and Sheldon, who are the kind of \"beautiful minds\" that understand how the universe works. But none of that genius helps them interact with people, especially women. All this begins to change when a free-spirited beauty named Penny moves in next door.</p>",
     "image": "https://static.tvmaze.com/uploads/images/medium_landscape/4/12368.jpg",
     "vanityCard": {
-      "number": 1,
-      "text": "Thank you for watching our show. I know you're anxious to get to CSI, so I'll talk fast. I hope you enjoyed our little comedy tonight. If you didn't, I don't care. I made up that part about caring so you wouldn't feel bad. This is my vanity card. It's how I communicate with you through time and space. Pretty cool, huh? Anyway, thanks for watching. See you next week.",
+      "number": 182,
+      "text": "At my age all discussions of sex are academic. I don't have sex anymore. I have seminars.",
       "image": null
     },
     "trivia": [
@@ -31,8 +31,8 @@
     "summary": "<p>Christmas is a source of stress for Leonard - whose handsome colleague starts dating Penny - and his friends, who are being tormented by Sheldon's obsession with gift-giving etiquette.</p>",
     "image": "https://static.tvmaze.com/uploads/images/medium_landscape/4/12355.jpg",
     "vanityCard": {
-      "number": 198,
-      "text": "I love the holidays. There's something about this time of year that makes people want to be nice to each other. Unfortunately, as I write this, it's mid-October. Everyone's in a pissy mood and traffic is terrible.",
+      "number": 233,
+      "text": "I was thinking this morning that if I had to choose between sex with my wife and writing this vanity card, I'd choose sex with my wife. She was out of town this morning and I needed to write this vanity card. This can become a useful formula. Forced to choose between two or more options, one can quickly discover what one really wants by noticing what one would choose if all options were available.",
       "image": null
     },
     "trivia": [
@@ -50,7 +50,11 @@
     "rating": 8.7,
     "summary": "<p>Leonard tells Penny about how he met Sheldon for the first time...and what happened to the elevator.</p>",
     "image": "https://static.tvmaze.com/uploads/images/medium_landscape/4/12487.jpg",
-    "vanityCard": null,
+    "vanityCard": {
+      "number": 287,
+      "text": "As usual, at this point in the evening, I have nothing to say. I'd like to try to fool you into thinking I do, but why bother. After all, how many people are actually pausing this to read it? Four? Five? They probably live alone and [censored] [censored] [censored] [censored] [censored]. They probably enjoy [censored] [censored] [censored] and [censored] [censored] [censored] [censored]. If that's true then I really do have nothing to say to them.",
+      "image": null
+    },
     "trivia": [
       "This episode finally explains why the elevator in the building has been broken throughout the series",
       "Features flashbacks showing how Leonard and Sheldon first became roommates"
@@ -67,13 +71,13 @@
     "summary": "<p>When Wolowitz gets to work with Stephen Hawking, Sheldon is willing to do anything to meet his hero.</p>",
     "image": "https://static.tvmaze.com/uploads/images/medium_landscape/4/12299.jpg",
     "vanityCard": {
-      "number": 359,
-      "text": "I've been thinking about the word 'EntertainMENT.' Why ment? Why not EntertainWOMENT? Oh right, that's called the Oxygen Channel.",
+      "number": 383,
+      "text": "There is no money in TV unless you become famous enough to turn your quote into a de facto annuity. Not so with endorsements. You can hawk your way to fortune and still not be recognized at your local Starbucks. It all comes down to this: art and commerce are weird roommates. (Let's not forget who writes this card.)",
       "image": null
     },
     "trivia": [
       "Stephen Hawking guest stars as himself in this episode",
-      "Hawking's appearance was kept secret until the episode aired"
+      "The story follows Sheldon doing a series of tasks for Howard in exchange for meeting Hawking"
     ]
   },
   {
@@ -86,7 +90,11 @@
     "rating": 7.6,
     "summary": "<p>While Sheldon is away in Texas, everyone gathers to decorate the apartment Christmas tree, and they each realize how much he has changed their lives.</p>",
     "image": "https://static.tvmaze.com/uploads/images/medium_landscape/4/12110.jpg",
-    "vanityCard": null,
+    "vanityCard": {
+      "number": 434,
+      "text": "Whatever happened to Andrew Dice Clay?",
+      "image": null
+    },
     "trivia": [
       "Features alternate reality sequences showing what everyone's lives would be like without Sheldon",
       "This is a holiday-themed episode"
@@ -103,8 +111,8 @@
     "summary": "<p>Sheldon struggles with the death of his childhood hero, Professor Proton.</p>",
     "image": "https://static.tvmaze.com/uploads/images/medium_landscape/4/12121.jpg",
     "vanityCard": {
-      "number": 438,
-      "text": "I'd like to take a moment to talk about the death of a beloved character. Not on our show. I'm talking about the death of David Letterman's career. Just kidding. I love Dave. But seriously, how much longer can he do this?",
+      "number": 456,
+      "text": "The card where I wrote about David Letterman was in no way intended to suggest that his is less funny, or his career is slowing down, or that his days as host of The Late Show are numbered. So enough with the hate email. I was kidding. Dave's great. And if his career is over, I'm sure you'll all still love him.",
       "image": null
     },
     "trivia": [
@@ -121,8 +129,15 @@
     "rating": 7.5,
     "summary": "<p>Chaos ensues when Leonard's recently divorced parents, Alfred and Beverly, and Sheldon's devoutly religious mother, Mary, come to town. Also, Wolowitz and Koothrappali think the government is out to get them when they are contacted about their guidance system.</p>",
     "image": "https://static.tvmaze.com/uploads/images/medium_landscape/55/139271.jpg",
-    "vanityCard": null,
-    "trivia": []
+    "vanityCard": {
+      "number": 532,
+      "text": "I don't know how to tell stories. I just know how to make things up. Every week we put together an episode and every week people ask where these stories come from. I don't know. I'm hoping if I keep this up eventually I'll find out. Maybe then I can write one that I understand. I just know it's magic.",
+      "image": null
+    },
+    "trivia": [
+      "This is the Season 9 finale",
+      "The episode ends on a cliffhanger involving Leonard's father and Sheldon's mother"
+    ]
   },
   {
     "id": 1175046,
@@ -135,11 +150,14 @@
     "summary": "<p>Amy gives Sheldon an answer to his proposal while Howard and Bernadette struggle with some unexpected news.</p>",
     "image": "https://static.tvmaze.com/uploads/images/medium_landscape/142/355239.jpg",
     "vanityCard": {
-      "number": 543,
-      "text": "I'm often asked where I get my ideas. The answer is: I don't know and I don't care. It's like asking a farmer where the rain comes from. He doesn't know and he doesn't care. As long as it falls on his crops, he's happy.",
+      "number": 561,
+      "text": "There is no greater joy in life than making things up and pretending they happened.",
       "image": null
     },
-    "trivia": []
+    "trivia": [
+      "This episode resolves the Season 10 finale cliffhanger and opens with Amy answering Sheldon's proposal",
+      "Bernadette and Howard learn they are expecting their second child"
+    ]
   },
   {
     "id": 1646220,
@@ -152,8 +170,8 @@
     "summary": "<p>Bernadette and Wolowitz leave their kids for the first time; Penny and Leonard try to keep a secret; Sheldon and Amy stick together; and Koothrappali makes a new friend, as the gang travels together into an uncharted future.</p>",
     "image": "https://static.tvmaze.com/uploads/images/medium_landscape/197/493243.jpg",
     "vanityCard": {
-      "number": 649,
-      "text": "And so we come to the end. Twelve years, 279 episodes, one incredible journey. To all the writers, actors, crew, and especially to you, the viewers - thank you. It has been the privilege of a lifetime. I'm going to miss this show. And I'm going to miss you. Chuck.",
+      "number": 622,
+      "text": "The End",
       "image": null
     },
     "trivia": [
