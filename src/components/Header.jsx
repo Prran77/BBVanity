@@ -6,7 +6,11 @@ function Header({ theme, toggleTheme }) {
     <header className="header">
       <div className="header-content">
         <Link to="/" className="logo">
-          <h1 className="logo-title">Big Nag Theory</h1>
+          <img
+            className="logo-image"
+            src="/images/bblogo.png"
+            alt="Big Bang Theory"
+          />
           <span className="subtitle">Vanity Cards Archive</span>
         </Link>
 
