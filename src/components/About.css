@@ -29,7 +29,7 @@
 }
 
 .about-section h2 {
-  font-family: 'IBM Plex Mono', Consolas, monospace;
+  font-family: var(--font-mono);
   font-size: 1.06rem;
   margin-bottom: 0.8rem;
   color: var(--accent-cyan);
@@ -59,7 +59,7 @@
   position: absolute;
   left: 0;
   color: var(--secondary-color);
-  font-family: 'IBM Plex Mono', Consolas, monospace;
+  font-family: var(--font-mono);
 }
 
 .about-section ul li strong {
@@ -89,7 +89,7 @@
 
 .year {
   color: var(--secondary-color);
-  font-family: 'IBM Plex Mono', Consolas, monospace;
+  font-family: var(--font-mono);
 }
 
 @media (max-width: 768px) {

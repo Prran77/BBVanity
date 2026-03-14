@@ -32,7 +32,7 @@ At the end of each episode, a "vanity card" from producer Chuck Lorre appears br
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/Bigbangvanity.git
+   git clone <your-repo-url>
    cd Bigbangvanity
    ```
 
@@ -88,7 +88,7 @@ npm run preview
    - Takes 2-3 minutes
 
 5. **Visit Your Site**
-   - Your site is live at: `https://YOUR_USERNAME.github.io/Bigbangvanity/`
+   - Your site is live at: `<your-site-url>`
 
 **📖 See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed step-by-step instructions!**
 

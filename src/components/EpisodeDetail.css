@@ -74,7 +74,7 @@
   border-radius: 999px;
   padding: 0.4rem 0.8rem;
   font-size: 0.76rem;
-  font-family: 'IBM Plex Mono', Consolas, monospace;
+  font-family: var(--font-mono);
   letter-spacing: 0.04em;
 }
 
@@ -101,7 +101,7 @@
 
 .detail-rating {
   color: var(--secondary-color);
-  font-family: 'IBM Plex Mono', Consolas, monospace;
+  font-family: var(--font-mono);
   font-weight: 700;
 }
 
@@ -120,7 +120,7 @@
 
 .detail-section h2 {
   font-size: 1.22rem;
-  font-family: 'IBM Plex Mono', Consolas, monospace;
+  font-family: var(--font-mono);
   margin-bottom: 0.95rem;
   padding-bottom: 0.55rem;
   border-bottom: 1px solid rgba(82, 180, 255, 0.35);
@@ -185,6 +185,17 @@
   margin-bottom: 0;
 }
 
+.trivia-source {
+  margin-top: 0.75rem;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+}
+
+.trivia-source a {
+  color: var(--accent-blue);
+  font-family: var(--font-mono);
+}
+
 .episode-navigation {
   margin-top: 1.2rem;
   display: grid;
@@ -215,7 +226,7 @@
 
 .nav-label {
   color: var(--text-secondary);
-  font-family: 'IBM Plex Mono', Consolas, monospace;
+  font-family: var(--font-mono);
   font-size: 0.79rem;
 }
 

@@ -16,7 +16,7 @@ That's it! No Node.js, Git, or command line needed for uploading.
 
 ### Step 1: Create a New Repository on GitHub
 
-1. Go to **[github.com](https://github.com)** and sign in
+1. Go to **your git host** and sign in
 2. Click the **"+"** button in the top-right corner
 3. Select **"New repository"**
 
@@ -134,10 +134,10 @@ When you see a **green checkmark ✅**, deployment is successful!
 
 Your website is now live at:
 ```
-https://YOUR_USERNAME.github.io/Bigbangvanity/
+<your-site-url>
 ```
 
-**Replace `YOUR_USERNAME` with your actual GitHub username**
+**Replace `your-username` with your actual GitHub username**
 
 **Example**: If your username is `johndoe`, visit:
 ```

@@ -12,7 +12,7 @@ This guide will help you deploy your Big Bang Theory Vanity Cards application to
 
 ### 1. Create a GitHub Repository
 
-1. Go to [GitHub](https://github.com) and sign in
+1. Go to your git host and sign in
 2. Click the "+" icon in the top right
 3. Select "New repository"
 4. Name it **exactly** `Bigbangvanity` (case-sensitive, must match vite.config.js)
@@ -114,10 +114,10 @@ After committing, verify everything uploaded correctly:
 
 Your site is now live at:
 ```
-https://YOUR_USERNAME.github.io/Bigbangvanity/
+<your-site-url>
 ```
 
-Replace `YOUR_USERNAME` with your actual GitHub username.
+Replace `your-username` with your actual GitHub username.
 
 **Example**: If your GitHub username is `johndoe`, visit:
 ```

@@ -56,7 +56,7 @@ Have an idea? Open an issue with:
 
 #### Setup
 ```bash
-git clone https://github.com/YOUR_USERNAME/Bigbangvanity.git
+git clone <your-repo-url>
 cd Bigbangvanity
 npm install
 npm run dev

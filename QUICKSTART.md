@@ -65,7 +65,7 @@ Quick version:
 2. Click "Upload files" and drag all project files
 3. Go to Settings → Pages → Source: GitHub Actions
 4. Wait 2-3 minutes for deployment
-5. Your site is live at `https://YOUR_USERNAME.github.io/Bigbangvanity/`
+5. Your site is live at `<your-site-url>`
 
 ## ❓ Troubleshooting
 

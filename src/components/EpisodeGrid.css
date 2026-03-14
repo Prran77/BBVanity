@@ -16,6 +16,7 @@
 }
 
 .search-box {
+  position: relative;
   min-width: 230px;
 }
 
@@ -28,7 +29,7 @@
   background: var(--bg-card-solid);
   color: var(--text-primary);
   font-size: 0.96rem;
-  font-family: 'IBM Plex Mono', Consolas, monospace;
+  font-family: var(--font-mono);
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -47,10 +48,60 @@
   font-weight: 600;
 }
 
+.search-suggestions {
+  position: absolute;
+  top: calc(100% + 0.45rem);
+  left: 0;
+  right: 0;
+  z-index: 30;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card-solid);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: 0 14px 30px var(--shadow);
+}
+
+.suggestion-item {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid var(--border-color);
+  background: transparent;
+  color: var(--text-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.68rem 0.85rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.suggestion-item:last-child {
+  border-bottom: 0;
+}
+
+.suggestion-item:hover,
+.suggestion-item.active {
+  background: rgba(82, 180, 255, 0.12);
+}
+
+.suggestion-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.suggestion-meta {
+  color: var(--text-secondary);
+  font-size: 0.74rem;
+  letter-spacing: 0.04em;
+  font-family: var(--font-mono);
+}
+
 .results-info {
   margin: 0.6rem 0 1.2rem;
   color: var(--text-secondary);
-  font-family: 'IBM Plex Mono', Consolas, monospace;
+  font-family: var(--font-mono);
   font-size: 0.9rem;
 }
 
@@ -126,7 +177,7 @@
   background: rgba(8, 22, 41, 0.86);
   border: 1px solid rgba(85, 206, 255, 0.5);
   color: #aeeeff;
-  font-family: 'IBM Plex Mono', Consolas, monospace;
+  font-family: var(--font-mono);
   font-size: 0.7rem;
   font-weight: 600;
   padding: 0.36rem 0.62rem;
@@ -159,7 +210,7 @@
   gap: 0.7rem;
   padding: 0.62rem 0.8rem;
   font-size: 0.76rem;
-  font-family: 'IBM Plex Mono', Consolas, monospace;
+  font-family: var(--font-mono);
   color: #92e4ff;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -216,7 +267,7 @@
 
 .episode-number {
   color: var(--accent-cyan);
-  font-family: 'IBM Plex Mono', Consolas, monospace;
+  font-family: var(--font-mono);
   font-size: 0.84rem;
   letter-spacing: 0.04em;
 }

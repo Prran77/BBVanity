@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import episodesData from '../data/episodes.json'
 import './EpisodeGrid.css'
@@ -13,6 +13,9 @@ function EpisodeGrid() {
   const [loading, setLoading] = useState(true)
   const [hoveredVanityCard, setHoveredVanityCard] = useState(null)
   const [hoverPosition, setHoverPosition] = useState({ x: 0, y: 0 })
+  const [showSuggestions, setShowSuggestions] = useState(false)
+  const [activeSuggestionIndex, setActiveSuggestionIndex] = useState(-1)
+  const hideSuggestionsTimeoutRef = useRef(null)
 
   useEffect(() => {
     // Simulate loading
@@ -34,6 +37,24 @@ function EpisodeGrid() {
       const matchesSeason = selectedSeason === 'all' || episode.season === parseInt(selectedSeason, 10)
       return matchesSearch && matchesSeason
     })
+  }, [episodes, searchTerm, selectedSeason])
+
+  const predictiveSuggestions = useMemo(() => {
+    const trimmed = searchTerm.trim().toLowerCase()
+    if (!trimmed) return []
+
+    return episodes
+      .filter((episode) => {
+        const matchesSeason =
+          selectedSeason === 'all' || episode.season === parseInt(selectedSeason, 10)
+        if (!matchesSeason) return false
+
+        return (
+          episode.name.toLowerCase().includes(trimmed) ||
+          episode.summary?.toLowerCase().includes(trimmed)
+        )
+      })
+      .slice(0, 6)
   }, [episodes, searchTerm, selectedSeason])
 
   const getPreviewPosition = (event) => {
@@ -77,6 +98,65 @@ function EpisodeGrid() {
     setHoveredVanityCard(null)
   }
 
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value)
+    setShowSuggestions(true)
+    setActiveSuggestionIndex(-1)
+  }
+
+  const applySuggestion = (episodeName) => {
+    setSearchTerm(episodeName)
+    setShowSuggestions(false)
+    setActiveSuggestionIndex(-1)
+  }
+
+  const handleSearchKeyDown = (event) => {
+    if (!showSuggestions || predictiveSuggestions.length === 0) return
+
+    if (event.key === 'ArrowDown') {
+      event.preventDefault()
+      setActiveSuggestionIndex((prevIndex) => {
+        const nextIndex = prevIndex + 1
+        return nextIndex >= predictiveSuggestions.length ? 0 : nextIndex
+      })
+      return
+    }
+
+    if (event.key === 'ArrowUp') {
+      event.preventDefault()
+      setActiveSuggestionIndex((prevIndex) => {
+        if (prevIndex <= 0) return predictiveSuggestions.length - 1
+        return prevIndex - 1
+      })
+      return
+    }
+
+    if (event.key === 'Enter' && activeSuggestionIndex >= 0) {
+      event.preventDefault()
+      applySuggestion(predictiveSuggestions[activeSuggestionIndex].name)
+      return
+    }
+
+    if (event.key === 'Escape') {
+      setShowSuggestions(false)
+      setActiveSuggestionIndex(-1)
+    }
+  }
+
+  const handleSearchFocus = () => {
+    if (hideSuggestionsTimeoutRef.current) {
+      clearTimeout(hideSuggestionsTimeoutRef.current)
+    }
+    setShowSuggestions(true)
+  }
+
+  const handleSearchBlur = () => {
+    hideSuggestionsTimeoutRef.current = setTimeout(() => {
+      setShowSuggestions(false)
+      setActiveSuggestionIndex(-1)
+    }, 140)
+  }
+
   if (loading) {
     return <div className="loading">Loading episodes</div>
   }
@@ -89,9 +169,36 @@ function EpisodeGrid() {
             type="text"
             placeholder="Search episodes..."
             value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
+            onChange={handleSearchChange}
+            onKeyDown={handleSearchKeyDown}
+            onFocus={handleSearchFocus}
+            onBlur={handleSearchBlur}
             className="search-input"
+            autoComplete="off"
+            aria-autocomplete="list"
+            aria-expanded={showSuggestions && predictiveSuggestions.length > 0}
+            aria-label="Search episodes"
           />
+          {showSuggestions && predictiveSuggestions.length > 0 && (
+            <div className="search-suggestions" role="listbox">
+              {predictiveSuggestions.map((episode, index) => (
+                <button
+                  key={episode.id}
+                  type="button"
+                  className={`suggestion-item ${index === activeSuggestionIndex ? 'active' : ''}`}
+                  onMouseDown={() => applySuggestion(episode.name)}
+                  role="option"
+                  aria-selected={index === activeSuggestionIndex}
+                >
+                  <span className="suggestion-title">{episode.name}</span>
+                  <span className="suggestion-meta">
+                    S{episode.season.toString().padStart(2, '0')}
+                    E{episode.number.toString().padStart(2, '0')}
+                  </span>
+                </button>
+              ))}
+            </div>
+          )}
         </div>
 
         <div className="season-filter">

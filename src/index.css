@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
 :root {
   --primary-color: #ff7043;
@@ -23,6 +23,9 @@
   --radius-sm: 10px;
   --radius-md: 16px;
   --radius-lg: 24px;
+  --font-body: 'Manrope', 'Segoe UI', sans-serif;
+  --font-heading: 'Outfit', 'Manrope', sans-serif;
+  --font-mono: var(--font-mono);
 }
 
 [data-theme="dark"] {
@@ -32,18 +35,18 @@
   --accent-green: #5ee0a9;
   --accent-cyan: #4de6ff;
 
-  --text-primary: #ecf5ff;
-  --text-secondary: #8ca2bc;
+  --text-primary: #f2f6fb;
+  --text-secondary: #9ba6b5;
 
-  --bg-primary: #050a14;
-  --bg-secondary: #091224;
-  --bg-card: rgba(9, 18, 34, 0.9);
-  --bg-card-solid: #0c1a31;
-  --border-color: #1a2c47;
-  --shadow: rgba(0, 0, 0, 0.52);
-  --bg-overlay-blue: rgba(46, 124, 214, 0.12);
-  --bg-overlay-orange: rgba(161, 90, 54, 0.14);
-  --bg-grid: rgba(41, 69, 102, 0.1);
+  --bg-primary: #000000;
+  --bg-secondary: #050505;
+  --bg-card: rgba(10, 10, 10, 0.94);
+  --bg-card-solid: #0d0d0d;
+  --border-color: #202020;
+  --shadow: rgba(0, 0, 0, 0.75);
+  --bg-overlay-blue: rgba(26, 120, 226, 0.08);
+  --bg-overlay-orange: rgba(204, 102, 46, 0.08);
+  --bg-grid: rgba(110, 125, 145, 0.07);
 }
 
 * {
@@ -59,7 +62,7 @@ body,
 }
 
 body {
-  font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--bg-primary);
@@ -85,7 +88,17 @@ body {
 }
 
 code {
-  font-family: 'IBM Plex Mono', Consolas, monospace;
+  font-family: var(--font-mono);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  letter-spacing: 0.01em;
 }
 
 a {

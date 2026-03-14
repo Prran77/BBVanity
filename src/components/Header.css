@@ -48,7 +48,7 @@
   letter-spacing: 0.17em;
   text-transform: uppercase;
   color: #86dcff;
-  font-family: 'IBM Plex Mono', Consolas, monospace;
+  font-family: var(--font-mono);
 }
 
 .nav {
@@ -91,12 +91,20 @@
 [data-theme='dark'] .header {
   background: linear-gradient(
     120deg,
-    rgba(4, 10, 22, 0.95),
-    rgba(7, 18, 37, 0.95) 50%,
-    rgba(3, 12, 28, 0.97)
+    rgba(0, 0, 0, 0.97),
+    rgba(5, 5, 5, 0.97) 50%,
+    rgba(0, 0, 0, 0.99)
   );
-  border-bottom-color: rgba(58, 108, 173, 0.35);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.42);
+  border-bottom-color: #1f1f1f;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.62);
+}
+
+[data-theme='dark'] .nav-link {
+  color: #d7e0ea;
+}
+
+[data-theme='dark'] .nav-link:hover {
+  background: rgba(82, 180, 255, 0.14);
 }
 
 @media (max-width: 900px) {
