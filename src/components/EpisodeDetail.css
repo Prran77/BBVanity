@@ -1,44 +1,43 @@
 .episode-detail {
-  max-width: 1200px;
-  padding: 2rem 1rem;
+  max-width: 1240px;
+  padding: 1.4rem 0.8rem;
 }
 
 .back-button {
-  background-color: var(--bg-card);
-  border: 2px solid var(--border-color);
+  border: 1px solid var(--border-color);
   color: var(--text-primary);
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 500;
+  background: var(--bg-card);
+  padding: 0.72rem 1.1rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
-  margin-bottom: 2rem;
-  display: inline-block;
+  margin-bottom: 1.2rem;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .back-button:hover {
-  background-color: var(--primary-color);
-  color: white;
-  border-color: var(--primary-color);
+  transform: translateX(-3px);
+  border-color: var(--accent-blue);
+  box-shadow: 0 8px 18px var(--shadow);
   text-decoration: none;
-  transform: translateX(-5px);
 }
 
 .detail-header {
   display: grid;
-  grid-template-columns: 400px 1fr;
-  gap: 3rem;
-  margin-bottom: 3rem;
+  grid-template-columns: 390px 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.6rem;
 }
 
 .detail-image {
   width: 100%;
   height: 300px;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  background: linear-gradient(135deg, var(--bg-secondary), var(--border-color));
-  box-shadow: 0 4px 20px var(--shadow);
+  border: 1px solid var(--border-color);
+  background: linear-gradient(140deg, var(--bg-secondary), var(--border-color));
+  box-shadow: 0 12px 26px var(--shadow);
 }
 
 .detail-image img {
@@ -50,148 +49,136 @@
 .no-image-large {
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 6rem;
-  opacity: 0.3;
+  display: grid;
+  place-items: center;
+  font-size: 4rem;
+  opacity: 0.35;
 }
 
 .detail-info {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.2rem;
+  box-shadow: 0 12px 26px var(--shadow);
 }
 
 .episode-meta {
   display: flex;
-  gap: 1rem;
+  gap: 0.55rem;
+  margin-bottom: 0.8rem;
 }
 
 .season-badge,
 .episode-badge {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.76rem;
+  font-family: 'IBM Plex Mono', Consolas, monospace;
+  letter-spacing: 0.04em;
+}
+
+.season-badge {
+  color: #062740;
+  background: var(--accent-cyan);
 }
 
 .episode-badge {
-  background-color: var(--secondary-color);
+  color: #4a2800;
+  background: var(--secondary-color);
 }
 
 .detail-title {
-  font-size: 2.5rem;
-  margin: 0;
-  line-height: 1.2;
-  color: var(--text-primary);
+  font-size: clamp(1.7rem, 2.4vw, 2.5rem);
+  line-height: 1.14;
+  margin-bottom: 0.75rem;
 }
 
 .detail-airdate {
   color: var(--text-secondary);
-  font-size: 1.1rem;
-  margin: 0;
+  margin-bottom: 0.6rem;
 }
 
 .detail-rating {
-  font-size: 1.2rem;
   color: var(--secondary-color);
-  font-weight: 600;
+  font-family: 'IBM Plex Mono', Consolas, monospace;
+  font-weight: 700;
 }
 
 .detail-content {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  display: grid;
+  gap: 1rem;
 }
 
 .detail-section {
-  background-color: var(--bg-card);
-  border: 2px solid var(--border-color);
-  border-radius: 12px;
-  padding: 2rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  background: var(--bg-card);
+  box-shadow: 0 10px 24px var(--shadow);
 }
 
 .detail-section h2 {
-  font-size: 1.8rem;
-  margin: 0 0 1.5rem 0;
-  color: var(--text-primary);
-  border-bottom: 3px solid var(--primary-color);
-  padding-bottom: 0.5rem;
+  font-size: 1.22rem;
+  font-family: 'IBM Plex Mono', Consolas, monospace;
+  margin-bottom: 0.95rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid rgba(82, 180, 255, 0.35);
 }
 
 .summary-text {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: var(--text-primary);
+  line-height: 1.7;
 }
 
 .summary-text p {
-  margin: 1rem 0;
+  margin-bottom: 0.7rem;
 }
 
 .vanity-section {
-  background: linear-gradient(135deg, var(--bg-card), var(--bg-secondary));
-  border: 3px solid var(--primary-color);
+  border-color: rgba(82, 180, 255, 0.45);
+  background: linear-gradient(170deg, var(--bg-card), rgba(38, 76, 121, 0.16));
 }
 
 .vanity-card-display {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  display: grid;
+  gap: 1rem;
 }
 
 .vanity-image {
   width: 100%;
-  max-width: 600px;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px var(--shadow);
+  max-width: 680px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
 }
 
 .vanity-placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 3rem;
-  background-color: var(--bg-secondary);
-  border-radius: 8px;
-  font-size: 3rem;
-  opacity: 0.5;
-}
-
-.vanity-placeholder p {
-  font-size: 1rem;
-  margin-top: 1rem;
+  padding: 2rem 1rem;
+  background: rgba(95, 142, 198, 0.16);
+  border: 1px dashed rgba(105, 173, 236, 0.55);
+  border-radius: var(--radius-sm);
+  text-align: center;
+  opacity: 0.85;
 }
 
 .vanity-text {
-  background-color: rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
-  border-radius: 8px;
-  border-left: 4px solid var(--primary-color);
-}
-
-.vanity-text p {
-  margin: 0.5rem 0;
-  line-height: 1.6;
+  border: 1px solid rgba(82, 180, 255, 0.34);
+  background: rgba(7, 19, 34, 0.46);
+  color: #eaf6ff;
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  line-height: 1.65;
 }
 
 .trivia-list {
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .trivia-list li {
-  padding: 1rem;
-  margin-bottom: 1rem;
-  background-color: var(--bg-secondary);
-  border-left: 4px solid var(--accent-green);
-  border-radius: 8px;
-  line-height: 1.6;
+  margin-bottom: 0.65rem;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background: rgba(61, 220, 151, 0.1);
 }
 
 .trivia-list li:last-child {
@@ -199,33 +186,27 @@
 }
 
 .episode-navigation {
+  margin-top: 1.2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-top: 3rem;
+  gap: 0.9rem;
 }
 
 .nav-episode {
-  background-color: var(--bg-card);
-  border: 2px solid var(--border-color);
-  padding: 1.5rem;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
   color: var(--text-primary);
+  padding: 0.95rem;
+  display: grid;
+  gap: 0.3rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .nav-episode:hover {
-  border-color: var(--primary-color);
-  transform: translateY(-3px);
-  box-shadow: 0 5px 20px var(--shadow);
+  border-color: var(--accent-blue);
+  transform: translateY(-2px);
   text-decoration: none;
-}
-
-.nav-episode.prev {
-  text-align: left;
 }
 
 .nav-episode.next {
@@ -234,45 +215,26 @@
 
 .nav-label {
   color: var(--text-secondary);
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-family: 'IBM Plex Mono', Consolas, monospace;
+  font-size: 0.79rem;
 }
 
 .nav-title {
-  color: var(--text-primary);
-  font-size: 1.1rem;
+  font-size: 0.98rem;
   font-weight: 600;
 }
 
-/* Mobile responsive */
-@media (max-width: 968px) {
+@media (max-width: 970px) {
   .detail-header {
     grid-template-columns: 1fr;
-    gap: 2rem;
   }
 
   .detail-image {
-    height: 250px;
-  }
-
-  .detail-title {
-    font-size: 2rem;
+    height: 260px;
   }
 }
 
 @media (max-width: 768px) {
-  .episode-detail {
-    padding: 1rem 0.5rem;
-  }
-
-  .detail-section {
-    padding: 1.5rem;
-  }
-
-  .detail-section h2 {
-    font-size: 1.5rem;
-  }
-
   .episode-navigation {
     grid-template-columns: 1fr;
   }

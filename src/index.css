@@ -1,29 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
 :root {
-  /* Big Bang Theory brand colors */
-  --primary-color: #e74c3c;
-  --secondary-color: #f39c12;
-  --accent-blue: #3498db;
-  --accent-green: #2ecc71;
-  --text-primary: #2c3e50;
-  --text-secondary: #7f8c8d;
-  
-  /* Light theme */
-  --bg-primary: #ffffff;
-  --bg-secondary: #f8f9fa;
-  --bg-card: #ffffff;
-  --border-color: #dee2e6;
-  --shadow: rgba(0, 0, 0, 0.1);
+  --primary-color: #ff7043;
+  --secondary-color: #ffc15d;
+  --accent-blue: #2a9dff;
+  --accent-green: #3ddc97;
+  --accent-cyan: #00d4ff;
+
+  --text-primary: #10243d;
+  --text-secondary: #4d647c;
+
+  --bg-primary: #f5f8ff;
+  --bg-secondary: #eaf0ff;
+  --bg-card: rgba(255, 255, 255, 0.86);
+  --bg-card-solid: #ffffff;
+  --border-color: #c7d5ea;
+  --shadow: rgba(8, 28, 54, 0.14);
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
 }
 
 [data-theme="dark"] {
-  /* Dark theme - inspired by the show's apartment/living room */
-  --bg-primary: #1a1a2e;
-  --bg-secondary: #16213e;
-  --bg-card: #0f3460;
-  --text-primary: #eaeaea;
-  --text-secondary: #b0b0b0;
-  --border-color: #2a2a4e;
-  --shadow: rgba(0, 0, 0, 0.3);
+  --primary-color: #ff7a4f;
+  --secondary-color: #ffd166;
+  --accent-blue: #52b4ff;
+  --accent-green: #5ee0a9;
+  --accent-cyan: #4de6ff;
+
+  --text-primary: #ecf5ff;
+  --text-secondary: #9db3cb;
+
+  --bg-primary: #0a1222;
+  --bg-secondary: #0f1c34;
+  --bg-card: rgba(14, 29, 51, 0.82);
+  --bg-card-solid: #10233f;
+  --border-color: #253c5f;
+  --shadow: rgba(0, 0, 0, 0.38);
 }
 
 * {
@@ -32,20 +46,40 @@
   box-sizing: border-box;
 }
 
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--bg-primary);
+  background-image:
+    radial-gradient(circle at 10% 0%, rgba(42, 157, 255, 0.12), transparent 35%),
+    radial-gradient(circle at 80% 10%, rgba(255, 112, 67, 0.14), transparent 30%),
+    repeating-linear-gradient(
+      0deg,
+      rgba(55, 92, 130, 0.08) 0,
+      rgba(55, 92, 130, 0.08) 1px,
+      transparent 1px,
+      transparent 34px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(55, 92, 130, 0.08) 0,
+      rgba(55, 92, 130, 0.08) 1px,
+      transparent 1px,
+      transparent 34px
+    );
   color: var(--text-primary);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'IBM Plex Mono', Consolas, monospace;
 }
 
 a {
@@ -54,16 +88,16 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .main-content {
-  min-height: calc(100vh - 80px);
-  padding: 2rem 1rem;
+  min-height: calc(100vh - 86px);
+  padding: 2rem 1.1rem 2.6rem;
 }
 
 @media (max-width: 768px) {
   .main-content {
-    padding: 1rem 0.5rem;
+    padding: 1rem 0.55rem 1.8rem;
   }
 }

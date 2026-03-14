@@ -4,25 +4,36 @@
   flex-direction: column;
 }
 
-/* Loading and Error States */
 .loading {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 60vh;
-  font-size: 1.5rem;
-  color: var(--text-secondary);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--accent-cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  text-shadow: 0 0 18px rgba(0, 212, 255, 0.35);
 }
 
 .loading::after {
   content: '...';
-  animation: dots 1.5s steps(4, end) infinite;
+  display: inline-block;
+  width: 1.7em;
+  animation: dots 1.35s steps(4, end) infinite;
 }
 
 @keyframes dots {
-  0%, 20% { content: '.'; }
-  40% { content: '..'; }
-  60%, 100% { content: '...'; }
+  0% {
+    content: '.';
+  }
+  50% {
+    content: '..';
+  }
+  100% {
+    content: '...';
+  }
 }
 
 .error {
@@ -31,33 +42,35 @@
   justify-content: center;
   align-items: center;
   min-height: 60vh;
-  color: var(--primary-color);
   text-align: center;
   padding: 2rem;
 }
 
 .error h2 {
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
+  color: var(--primary-color);
 }
 
 .error p {
-  font-size: 1.1rem;
   color: var(--text-secondary);
+  max-width: 560px;
 }
 
-/* Container */
 .container {
-  max-width: 1400px;
+  max-width: 1420px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
-/* Fade in animation */
+.fade-in {
+  animation: fadeIn 0.44s ease-out;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(12px);
   }
   to {
     opacity: 1;
@@ -65,13 +78,8 @@
   }
 }
 
-.fade-in {
-  animation: fadeIn 0.5s ease-in;
-}
-
-/* Responsive utilities */
 @media (max-width: 768px) {
   .container {
-    padding: 0 0.5rem;
+    padding: 0 0.45rem;
   }
 }

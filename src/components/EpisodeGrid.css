@@ -1,96 +1,101 @@
 .episode-grid-container {
-  padding: 2rem 1rem;
+  padding: 1.5rem 0.8rem;
 }
 
 .filters {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto;
   gap: 1rem;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
+  margin-bottom: 1.1rem;
   align-items: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1rem;
+  box-shadow: 0 14px 30px var(--shadow);
 }
 
 .search-box {
-  flex: 1;
-  min-width: 250px;
+  min-width: 230px;
 }
 
-.search-input {
+.search-input,
+.season-select {
   width: 100%;
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
-  border: 2px solid var(--border-color);
-  border-radius: 8px;
-  background-color: var(--bg-card);
+  padding: 0.8rem 0.95rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  background: var(--bg-card-solid);
   color: var(--text-primary);
-  transition: border-color 0.3s ease;
+  font-size: 0.96rem;
+  font-family: 'IBM Plex Mono', Consolas, monospace;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.search-input:focus {
+.search-input:focus,
+.season-select:focus {
   outline: none;
-  border-color: var(--primary-color);
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 3px rgba(82, 180, 255, 0.2);
 }
 
 .season-filter {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-weight: 500;
-}
-
-.season-select {
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
-  border: 2px solid var(--border-color);
-  border-radius: 8px;
-  background-color: var(--bg-card);
-  color: var(--text-primary);
-  cursor: pointer;
-  transition: border-color 0.3s ease;
-}
-
-.season-select:focus {
-  outline: none;
-  border-color: var(--primary-color);
+  gap: 0.6rem;
+  color: var(--text-secondary);
+  font-weight: 600;
 }
 
 .results-info {
+  margin: 0.6rem 0 1.2rem;
   color: var(--text-secondary);
-  margin-bottom: 1.5rem;
-  font-size: 0.95rem;
+  font-family: 'IBM Plex Mono', Consolas, monospace;
+  font-size: 0.9rem;
 }
 
 .episode-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(282px, 1fr));
+  gap: 1.45rem;
 }
 
 .episode-card {
-  background-color: var(--bg-card);
-  border: 2px solid var(--border-color);
-  border-radius: 12px;
+  position: relative;
+  border-radius: var(--radius-md);
   overflow: hidden;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  box-shadow: 0 10px 22px var(--shadow);
   color: var(--text-primary);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.episode-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(125deg, rgba(82, 180, 255, 0.18), transparent 44%, rgba(255, 112, 67, 0.14));
+  opacity: 0;
+  transition: opacity 0.2s ease;
 }
 
 .episode-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px var(--shadow);
-  border-color: var(--primary-color);
-  text-decoration: none;
+  transform: translateY(-4px);
+  border-color: rgba(82, 180, 255, 0.55);
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.25);
+}
+
+.episode-card:hover::before {
+  opacity: 1;
 }
 
 .episode-image {
   position: relative;
   width: 100%;
-  height: 180px;
-  background: linear-gradient(135deg, var(--bg-secondary), var(--border-color));
+  height: 188px;
+  background: linear-gradient(140deg, var(--bg-secondary), var(--border-color));
   overflow: hidden;
 }
 
@@ -98,112 +103,91 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.episode-card:hover .episode-image img {
+  transform: scale(1.04);
 }
 
 .no-image {
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 4rem;
-  opacity: 0.3;
+  display: grid;
+  place-items: center;
+  font-size: 3.4rem;
+  opacity: 0.35;
 }
 
 .vanity-badge {
   position: absolute;
   top: 10px;
   right: 10px;
-  background: var(--primary-color);
-  color: white;
-  padding: 0.4rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: bold;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  background: rgba(8, 22, 41, 0.86);
+  border: 1px solid rgba(85, 206, 255, 0.5);
+  color: #aeeeff;
+  font-family: 'IBM Plex Mono', Consolas, monospace;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.36rem 0.62rem;
+  border-radius: 999px;
 }
 
 .episode-info {
-  padding: 1.25rem;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+  padding: 1.1rem;
+  display: grid;
   gap: 0.5rem;
 }
 
 .episode-number {
-  color: var(--primary-color);
-  font-weight: bold;
-  font-size: 0.9rem;
-  letter-spacing: 0.5px;
+  color: var(--accent-cyan);
+  font-family: 'IBM Plex Mono', Consolas, monospace;
+  font-size: 0.84rem;
+  letter-spacing: 0.04em;
 }
 
 .episode-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin: 0;
+  font-size: 1.05rem;
   line-height: 1.4;
-  color: var(--text-primary);
 }
 
 .episode-airdate {
   color: var(--text-secondary);
-  font-size: 0.85rem;
-  margin: 0;
+  font-size: 0.87rem;
 }
 
 .episode-rating {
   color: var(--secondary-color);
-  font-weight: 500;
+  font-weight: 700;
   font-size: 0.9rem;
 }
 
 .no-results {
+  margin-top: 2.5rem;
   text-align: center;
-  padding: 4rem 2rem;
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 2.5rem 1rem;
   color: var(--text-secondary);
+  background: var(--bg-card);
 }
 
 .no-results h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
   color: var(--text-primary);
+  margin-bottom: 0.45rem;
 }
 
-.no-results p {
-  font-size: 1rem;
-}
-
-/* Mobile responsive */
-@media (max-width: 768px) {
-  .episode-grid-container {
-    padding: 1rem 0.5rem;
-  }
-
+@media (max-width: 900px) {
   .filters {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .search-box {
-    width: 100%;
+    grid-template-columns: 1fr;
   }
 
   .season-filter {
-    width: 100%;
-  }
-
-  .season-select {
-    flex: 1;
-  }
-
-  .episode-grid {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1.5rem;
+    justify-content: flex-start;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 520px) {
   .episode-grid {
     grid-template-columns: 1fr;
   }
