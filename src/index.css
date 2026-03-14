@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
 :root {
   --primary-color: #ff7043;
@@ -16,6 +16,9 @@
   --bg-card-solid: #ffffff;
   --border-color: #c7d5ea;
   --shadow: rgba(8, 28, 54, 0.14);
+  --bg-overlay-blue: rgba(42, 157, 255, 0.12);
+  --bg-overlay-orange: rgba(255, 112, 67, 0.14);
+  --bg-grid: rgba(55, 92, 130, 0.08);
 
   --radius-sm: 10px;
   --radius-md: 16px;
@@ -30,14 +33,17 @@
   --accent-cyan: #4de6ff;
 
   --text-primary: #ecf5ff;
-  --text-secondary: #9db3cb;
+  --text-secondary: #8ca2bc;
 
-  --bg-primary: #0a1222;
-  --bg-secondary: #0f1c34;
-  --bg-card: rgba(14, 29, 51, 0.82);
-  --bg-card-solid: #10233f;
-  --border-color: #253c5f;
-  --shadow: rgba(0, 0, 0, 0.38);
+  --bg-primary: #050a14;
+  --bg-secondary: #091224;
+  --bg-card: rgba(9, 18, 34, 0.9);
+  --bg-card-solid: #0c1a31;
+  --border-color: #1a2c47;
+  --shadow: rgba(0, 0, 0, 0.52);
+  --bg-overlay-blue: rgba(46, 124, 214, 0.12);
+  --bg-overlay-orange: rgba(161, 90, 54, 0.14);
+  --bg-grid: rgba(41, 69, 102, 0.1);
 }
 
 * {
@@ -58,19 +64,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--bg-primary);
   background-image:
-    radial-gradient(circle at 10% 0%, rgba(42, 157, 255, 0.12), transparent 35%),
-    radial-gradient(circle at 80% 10%, rgba(255, 112, 67, 0.14), transparent 30%),
+    radial-gradient(circle at 10% 0%, var(--bg-overlay-blue), transparent 35%),
+    radial-gradient(circle at 80% 10%, var(--bg-overlay-orange), transparent 30%),
     repeating-linear-gradient(
       0deg,
-      rgba(55, 92, 130, 0.08) 0,
-      rgba(55, 92, 130, 0.08) 1px,
+      var(--bg-grid) 0,
+      var(--bg-grid) 1px,
       transparent 1px,
       transparent 34px
     ),
     repeating-linear-gradient(
       90deg,
-      rgba(55, 92, 130, 0.08) 0,
-      rgba(55, 92, 130, 0.08) 1px,
+      var(--bg-grid) 0,
+      var(--bg-grid) 1px,
       transparent 1px,
       transparent 34px
     );

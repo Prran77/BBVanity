@@ -40,6 +40,19 @@
   letter-spacing: 0.03em;
 }
 
+.logo-title {
+  font-family: 'Bangers', 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff5d6;
+  text-shadow:
+    0 2px 0 rgba(0, 0, 0, 0.3),
+    0 0 12px rgba(255, 187, 87, 0.35);
+}
+
 .subtitle {
   display: inline-block;
   margin-top: 0.18rem;
@@ -87,6 +100,17 @@
   box-shadow: 0 8px 18px rgba(255, 139, 95, 0.32);
 }
 
+[data-theme='dark'] .header {
+  background: linear-gradient(
+    120deg,
+    rgba(4, 10, 22, 0.95),
+    rgba(7, 18, 37, 0.95) 50%,
+    rgba(3, 12, 28, 0.97)
+  );
+  border-bottom-color: rgba(58, 108, 173, 0.35);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.42);
+}
+
 @media (max-width: 900px) {
   .header-content {
     flex-direction: column;
@@ -104,6 +128,10 @@
 @media (max-width: 560px) {
   .logo h1 {
     font-size: 1.25rem;
+  }
+
+  .logo-title {
+    font-size: 1.65rem;
   }
 
   .subtitle {

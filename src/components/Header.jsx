@@ -6,21 +6,21 @@ function Header({ theme, toggleTheme }) {
     <header className="header">
       <div className="header-content">
         <Link to="/" className="logo">
-          <h1>🔬 Big Bang Theory</h1>
+          <h1 className="logo-title">Big Nag Theory</h1>
           <span className="subtitle">Vanity Cards Archive</span>
         </Link>
-        
+
         <nav className="nav">
           <Link to="/" className="nav-link">Episodes</Link>
           <Link to="/gallery" className="nav-link">Gallery</Link>
           <Link to="/about" className="nav-link">About</Link>
-          
-          <button 
-            onClick={toggleTheme} 
+
+          <button
+            onClick={toggleTheme}
             className="theme-toggle"
             aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
           >
-            {theme === 'dark' ? '☀️' : '🌙'}
+            {theme === 'dark' ? '\u2600' : '\u263D'}
           </button>
         </nav>
       </div>
