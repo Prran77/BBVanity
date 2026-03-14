@@ -23,7 +23,7 @@ function App() {
   }
 
   return (
-    <Router basename="/BBVanity">
+    <Router basename="/">
       <div className="app">
         <Header theme={theme} toggleTheme={toggleTheme} />
         <main className="main-content">
